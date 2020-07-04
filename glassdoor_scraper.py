@@ -51,7 +51,8 @@ def get_jobs(keyword, num_jobs, verbose, path, sleep_time):
             if len(jobs) >= num_jobs:
                 break
 
-            job_button.click() 
+            #job_button.click() 
+            driver.execute_script("arguments[0].click();", job_button)
             time.sleep(1)
             collected_successfully = False
 
@@ -68,6 +69,8 @@ def get_jobs(keyword, num_jobs, verbose, path, sleep_time):
             try:
                 #salary_estimate = driver.find_element_by_xpath('.//span[@class="gray salary"]').text
                 salary_estimate = driver.find_element_by_xpath('.//div[@class = "salary"]').text
+                if not bool(salary_estimate):
+                    salary_estimate = -1
             except NoSuchElementException:
                 salary_estimate = -1 
 
