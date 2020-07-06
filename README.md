@@ -1,2 +1,10 @@
-# data_scientist_salary
-use title, geography, company, job description information to predict data scientist job salary
+# Project Overview
+
+Estimate data scientist salary using data from glassdoor
+
+## Resources
+
+## Scrape data
+
+## Clean data
+
