@@ -81,4 +81,3 @@ mean_absolute_error(y_test,tpred_lm)
 mean_absolute_error(y_test,tpred_lml)
 mean_absolute_error(y_test,tpred_rf)
 
-
