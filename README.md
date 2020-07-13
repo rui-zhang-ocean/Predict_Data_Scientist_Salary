@@ -59,6 +59,9 @@ To clean the data and engineer new features, steps include:
 
 I conducted exploratory data analysis (EDA) using histogram, correlation heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
 
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/histogram.png "histogram") 
+* Average salary deviates from the normal distribution with slight positive skewness
+
 ![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/heatmap.png "heatmap") 
 * Older companies tend to have more competitors and longer job description
 
