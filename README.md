@@ -60,9 +60,10 @@ To clean the data and engineer new features, steps include:
 I conducted exploratory data analysis (EDA) using histogram, correlation heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
 
 ![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/heatmap.png "heatmap") 
-* 
+* Older companies tend to have more competitors and longer job description
 
 ![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_python_yn.png "boxplot_python")![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_excel_yn.png "boxplot_excel")
+* Jobs requiring `Python` typically pays more, and jobs requiring `Excel` typically pays less
 
 job_simp         | avg_salary  
 ---------------- | -----------
@@ -73,6 +74,7 @@ data engineer    | 105.40
 na               | 87.97
 manager          | 84.02
 analyst          | 66.12
+* Top three best paid data positions are director, machine learning and data scientist.
 
  skill    | Total	|Percent
 --------- | ------|-------
@@ -82,12 +84,14 @@ sql_yn	   |380	   |0.5121
 aws_yn	   |176	   |0.2372
 spark_yn	 |167	   |0.2251
 nlp_yn	   |40	    |0.0539
+* Over half of the positions require one of the three skills: `Python`, `Excel` and `SQL`.
 
 python_yn|	0 	| 1	
 ---------| ---| ---
 junior	  |2	  | 3
 na	      |252	| 265
 senior	  |96	 | 124
+* `Python` is more often needed in senior positions compared to generic (non-specific seniority) positions.
 
 ## 3_build_model
 
