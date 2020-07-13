@@ -57,6 +57,45 @@ To clean the data and engineer new features, steps include:
 
 ## 2_exploratory_data_analysis
 
+I conducted exploratory data analysis (EDA) using histogram, correlation heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
+
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/histogram.png "histogram")
+
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/heatmap.png "histogram")
+
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_python_yn.png "histogram")
+
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_excel_yn.png "histogram")
+
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/wordcloud.png "histogram")
+
+
+job_simp         | avg_salary  
+---------------- | -----------
+director         | 168.61
+machine learning | 126.43
+data scientist   | 117.56
+data engineer    | 105.40
+na               | 87.97
+manager          | 84.02
+analyst          | 66.12
+
+
+ skill    | Total	|Percent
+--------- | ------|-------
+python_yn	|392	   |0.5283
+excel_yn	 |388	   |0.5229
+sql_yn	   |380	   |0.5121
+aws_yn	   |176	   |0.2372
+spark_yn	 |167	   |0.2251
+nlp_yn	   |40	    |0.0539
+
+
+python_yn|	0 	| 1	
+---------| ---| ---
+junior	  |2	  | 3
+na	      |252	| 265
+senior	  |96	 | 124
 
 ## 3_build_model
 
