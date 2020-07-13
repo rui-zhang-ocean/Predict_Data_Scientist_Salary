@@ -59,16 +59,10 @@ To clean the data and engineer new features, steps include:
 
 I conducted exploratory data analysis (EDA) using histogram, correlation heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
 
-![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/histogram.png "histogram")
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/heatmap.png "heatmap") 
+* 
 
-![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/heatmap.png "histogram")
-
-![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_python_yn.png "histogram")
-
-![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_excel_yn.png "histogram")
-
-![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/wordcloud.png "histogram")
-
+![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_python_yn.png "boxplot_python")![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/boxplot_excel_yn.png "boxplot_excel")
 
 job_simp         | avg_salary  
 ---------------- | -----------
@@ -80,7 +74,6 @@ na               | 87.97
 manager          | 84.02
 analyst          | 66.12
 
-
  skill    | Total	|Percent
 --------- | ------|-------
 python_yn	|392	   |0.5283
@@ -89,7 +82,6 @@ sql_yn	   |380	   |0.5121
 aws_yn	   |176	   |0.2372
 spark_yn	 |167	   |0.2251
 nlp_yn	   |40	    |0.0539
-
 
 python_yn|	0 	| 1	
 ---------| ---| ---
