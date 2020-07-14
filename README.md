@@ -122,5 +122,5 @@ The Random Forest model outperformed the other approaches on the validation and 
 ## 4_future_steps
 
 * Imputation of missing values
-* Try different models or ensemble approach
+* Try different models or ensemble approach, set up workflow pipeline
 * Productionize the model into a web page, ideally anyone can input job information and get salary estimate as return
