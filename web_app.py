@@ -59,4 +59,4 @@ features2read = np.array(features).reshape(1, -1)
 if st.button('Estimate Salary'):
     estimation = model.predict(features2read)
     st.balloons()
-    st.success(f'Your estimated salary is US$ {round(estimation[0],3)*1000} ')
+    st.success(f'Your estimated salary is {int(round(estimation[0]))} K US$')
