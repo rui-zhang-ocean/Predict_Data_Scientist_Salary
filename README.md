@@ -1,6 +1,6 @@
 # Project Summary
 
-* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that estimates data science job salaries to help with offer negotiation.
+* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that estimates data science job salaries to help with job offer negotiation.
 * Scraped 900+ job posts from glassdoor using Python and Selenium.
 * Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers, job locations, job titles and seniorities.
 * Conducted exploratory data analysis (EDA) using histogram, barplot, boxplot, heatmap and pivot_table.
@@ -12,7 +12,7 @@
 * Python Version: 3.8.3
 * Tools: pandas, numpy, sklearn, matplotlib, seaborn, selenium, joblib, streamlit, Heroku 
 * Project idea inspired by [Ken Jee](https://www.youtube.com/channel/UCiT9RITQ9PW6BhXK0y2jaeg)
-* Scraper tutorial credits to [Ömer Sakarya](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)
+* Selenium scraper tutorial credits to [Ömer Sakarya](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)
 * Streamlit and Heroku turotial credits to [Sohaib Ahmad](https://towardsdatascience.com/deploy-streamlit-on-heroku-9c87798d2088) and [Chanin Nantasenamat](https://www.youtube.com/watch?v=zK4Ch6e1zq8)
 
 ## 0_collect_data
@@ -117,15 +117,15 @@ Multiple Linear Regression | 20.96           | N/A                              
 Lasso Regression           | 21.51           | 20.02                              | 18.05
 Random Forest              | 15.96           | 15.32                              | 11.85
 
-The Random Forest model outperformed the other approaches on the validation and test sets, with a MAE of ~ $12K.
+The Random Forest model outperformed the other approaches on test sets, with a MAE of ~ $12K.
 
 ## 4_deploy_web_app
 
-
+The optimized Random Forest model is pickled using Joblib, with that a web app is created using Streamlit and deployed with Heroku. It can be accessed [here](https://estimate-data-scientist-salary.herokuapp.com/). 
 
 ## 5_future_steps
 
-* Over half of job posts didn't specify senority on the job title, if we could extract years of experience requirement from job description, that would be a good indicator of senority. Or we could have a new feature `years of experience required`.
+* Over half of job posts didn't specify seniority on the job title, if we could extract years of experience requirement from job description, that would be a good indicator of seniority. Or we could use a new feature `years of experience required`.
 * The skills extraction could be improved by applying NLP techniques, i.e. check `tokens` from description text, by doing that we can capture skill with shorter name, such as R
 * Play with different models or ensemble approach, set up workflow pipeline to make that an automated process
 * Continue scraping job posts data to organize into database, allow users to choose which years data to use for the estimation. From a practical purpose, only using the most recent data can reflect the most recent job market variation.
