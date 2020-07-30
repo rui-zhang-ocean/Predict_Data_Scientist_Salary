@@ -7,6 +7,10 @@
 * Compared Multiple Linear Regression, Lasso Regression (optimized alpha) and Random Forest (optimized with GridSearchCV) models, among which Random Forest performs best, with mean absolute error ~ $12K.
 * Built wep app with Streamlit and deployed with Heroku.
 
+## Web Application Demo
+
+[![Demo](https://github.com/rui-zhang-ocean/Estimate_Data_Scientist_Salary/blob/master/figs/web_app_demo.gif)](https://estimate-data-scientist-salary.herokuapp.com/)
+
 ## Resources
 
 * Python Version: 3.8.3
