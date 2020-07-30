@@ -5,7 +5,7 @@
 * Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers, job locations, job titles and seniorities.
 * Conducted exploratory data analysis (EDA) using histogram, barplot, boxplot, heatmap and pivot_table.
 * Compared Multiple Linear Regression, Lasso Regression (optimized alpha) and Random Forest (optimized with GridSearchCV) models, among which Random Forest performs best, with mean absolute error ~ $12K.
-* Built wep app with Streamlit and deployed with Heroku.
+* Built web app with Streamlit and deployed with Heroku.
 
 ## Web Application Demo
 
