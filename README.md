@@ -1,20 +1,23 @@
 # Project Summary
 
-* Created a model that estimates data science job salaries (mean absolute error ~ $12K) to help with job offer negotiation.
-* Scraped 1000 job posts from glassdoor using Python and Selenium.
-* Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers.
+* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that estimates data science job salaries to help with offer negotiation.
+* Scraped 900+ job posts from glassdoor using Python and Selenium.
+* Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers, job locations, job titles and seniorities.
 * Conducted exploratory data analysis (EDA) using histogram, barplot, boxplot, heatmap and pivot_table.
-* Compared Multiple Linear Regression (baseline), Lasso Regression (optimized alpha) and Random Forest (optimized with GridSearchCV) models, among which Random Forest performs best.
+* Compared Multiple Linear Regression, Lasso Regression (optimized alpha) and Random Forest (optimized with GridSearchCV) models, among which Random Forest performs best, with mean absolute error ~ $12K.
+* Built wep app with Streamlit and deployed with Heroku.
 
 ## Resources
 
 * Python Version: 3.8.3
-* Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium
-* Scraper Github: https://github.com/arapfaik/scraping-glassdoor-selenium
+* Tools: pandas, numpy, sklearn, matplotlib, seaborn, selenium, joblib, streamlit, Heroku 
+* Project idea inspired by [Ken Jee](https://www.youtube.com/channel/UCiT9RITQ9PW6BhXK0y2jaeg)
+* Scraper tutorial credits to [Ömer Sakarya](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)
+* Streamlit and Heroku turotial credits to [Sohaib Ahmad](https://towardsdatascience.com/deploy-streamlit-on-heroku-9c87798d2088) and [Chanin Nantasenamat](https://www.youtube.com/watch?v=zK4Ch6e1zq8)
 
 ## 0_collect_data
 
-To scrape 1000 job postings from glassdoor.com with Selenium, for each job, we got:
+To scrape 900+ job postings from glassdoor.com with Selenium, for each job, I got:
 
 * Job title 
 * Salary Estimate
@@ -38,13 +41,11 @@ To clean the data and engineer new features, steps include:
 * Parsed mininum and maximum salary from the range string, calculated its average
 * Converted hourly salary to annually
 * Discarded data without salary
-* Extracted from job description text if following skillsets are mentioned:
+* Extracted from job description text on following skills:
   * Python
-  * Rstudio
   * SQL
   * Excel
   * AWS
-  * Spark
   * NLP
 * Made new columns including:
   * company state
@@ -57,7 +58,7 @@ To clean the data and engineer new features, steps include:
 
 ## 2_exploratory_data_analysis
 
-I conducted exploratory data analysis (EDA) using histogram, correlation heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
+I conducted exploratory data analysis (EDA) using histogram, heatmap, barplot, boxplot, pivot_table and word cloud. A few highlighted points and figures/tables are as below:
 
 ![alt text](https://github.com/rui-zhang-ocean/data_scientist_salary/blob/master/figs/histogram.png "histogram") 
 * Average salary deviates from the normal distribution with slight positive skewness
@@ -104,7 +105,7 @@ The dataset outliers aren't particularly bad, and considering the sparsity of th
 
 * Multiple Linear Regression – Baseline estimate
 * Lasso Regression – Normalized regression could effectively reduce over-fitting caused by OLS regression
-* Random Forest – Good fit considering the sparsity and one hot encoding of the data
+* Random Forest – Good fit considering the sparsity and one hot encoding of categorical data
 
 I performed optimization for `alpha` in Lasso Regression and `n_estimators`, `criterion` and `max_features` in Random Forest with GridsearchCV, both obtained improvement on validation sets. 
 
@@ -112,15 +113,19 @@ Results:
 
 Models                     | Validation sets | Validation sets after optimization | Test sets
 -------------------------- | ----------------| -----------------------------------|---------
-Multiple Linear Regression | 22.27           | N/A                                | 303045468.79
-Lasso Regression           | 21.57           | 20.10                              | 18.70
-Random Forest              | 15.81           | 15.33                              | 12.49
+Multiple Linear Regression | 20.96           | N/A                                | 17.75
+Lasso Regression           | 21.51           | 20.02                              | 18.05
+Random Forest              | 15.96           | 15.32                              | 11.85
 
-The Random Forest model outperformed the other approaches on the validation and test sets. It is worth noting that Multiple Linear Regression performs reasonably well on validation sets but horrible for test sets, which is a typical over-fitting case, that also justified the use of Lasso Regression.
+The Random Forest model outperformed the other approaches on the validation and test sets, with a MAE of ~ $12K.
+
+## 4_deploy_web_app
 
 
-## 4_future_steps
 
-* Use years of experience requirement to determine seniority
-* Try different models or ensemble approach, set up workflow pipeline
-* Productionize the model into a web page, ideally anyone can input job information and get salary estimate as return
+## 5_future_steps
+
+* Over half of job posts didn't specify senority on the job title, if we could extract years of experience requirement from job description, that would be a good indicator of senority. Or we could have a new feature `years of experience required`.
+* The skills extraction could be improved by applying NLP techniques, i.e. check `tokens` from description text, by doing that we can capture skill with shorter name, such as R
+* Play with different models or ensemble approach, set up workflow pipeline to make that an automated process
+* Continue scraping job posts data to organize into database, allow users to choose which years data to use for the estimation. From a practical purpose, only using the most recent data can reflect the most recent job market variation.
