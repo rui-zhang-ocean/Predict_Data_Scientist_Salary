@@ -1,15 +1,15 @@
 # Project Summary
 
-* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that estimates data science job salaries during COVID19 to help with job offer negotiation.
+* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that predicts data science job salaries in US during COVID19 to help with job offer negotiation.
 * Scraped 900+ job posts from glassdoor using Python and Selenium.
 * Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers, job locations, job titles and seniorities.
 * Conducted exploratory data analysis (EDA) using histogram, barplot, boxplot, heatmap and pivot_table.
-* Compared Multiple Linear Regression, Lasso Regression (optimized alpha) and Random Forest (optimized with GridSearchCV) models, among which Random Forest performs best, with mean absolute error ~ $12K.
-* Built web app with Streamlit and deployed with Heroku.
+* Compared multiple linear regression, lasso regression (optimized alpha) and random forest (optimized with GridSearchCV) models, among which random forest performs best, with mean absolute error ~ $12K.
+* Built web app with Streamlit and deployed on Heroku.
 
 ## Web Application Demo
 
-[![Demo](https://github.com/rui-zhang-ocean/Estimate_Data_Scientist_Salary/blob/master/figs/web_app_demo.gif)](https://estimate-data-scientist-salary.herokuapp.com/)
+[![Demo](https://github.com/rui-zhang-ocean/Predict_Data_Scientist_Salary/blob/master/figs/web_app_demo.gif)](https://predict-data-scientist-salary.herokuapp.com/)
 
 ## Resources
 
@@ -125,7 +125,7 @@ The Random Forest model outperformed the other approaches on test sets, with a M
 
 ## 4_deploy_web_app
 
-The optimized Random Forest model is pickled using Joblib, with that a web app is created using Streamlit and deployed with Heroku. It can be accessed [here](https://estimate-data-scientist-salary.herokuapp.com/). 
+The optimized Random Forest model is pickled using Joblib, with that a web app is created using Streamlit and deployed with Heroku. It can be accessed [here](https://predict-data-scientist-salary.herokuapp.com/). 
 
 ## 5_future_steps
 
