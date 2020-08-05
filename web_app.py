@@ -5,7 +5,7 @@ import pandas as pd
 import sklearn
 
 
-st.title('Estimate Data Scientist Salary in US')
+st.title('Predict Data Scientist Salary in US')
 
 df = pd.read_csv('DS_salary_cleaned.csv')
 model = joblib.load('model.pkl')
@@ -58,7 +58,7 @@ features = [num_competitor,same_state,python_yn,sql_yn,excel_yn,aws_yn,nlp_yn,
             
 features2read = np.array(features).reshape(1, -1)
 
-if st.button('Estimate Salary'):
+if st.button('Predict Salary'):
     estimation = model.predict(features2read)
     st.balloons()
-    st.success(f'Your estimated salary is {int(round(estimation[0]))} K US$')
+    st.success(f'Predicted salary is {int(round(estimation[0]))} K US$')
