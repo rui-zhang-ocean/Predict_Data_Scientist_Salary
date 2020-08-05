@@ -1,6 +1,6 @@
 # Project Summary
 
-* Built [a web app](https://estimate-data-scientist-salary.herokuapp.com/) that predicts data science job salaries in US during COVID19 to help with job offer negotiation.
+* Built [a web app](https://predict-data-scientist-salary.herokuapp.com/) that predicts data science job salaries in US during COVID19 to help with job offer negotiation.
 * Scraped 900+ job posts from glassdoor using Python and Selenium.
 * Engineered features from job description text to quantify skillsets (Python, SQL, Excel, etc) most desirable by employers, job locations, job titles and seniorities.
 * Conducted exploratory data analysis (EDA) using histogram, barplot, boxplot, heatmap and pivot_table.
