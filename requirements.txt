@@ -2,5 +2,5 @@ streamlit==0.64.0
 numpy==1.18.1
 selenium==3.141.0
 pandas==1.0.1
-joblib==0.14.1
+joblib==1.2.0
 scikit_learn==0.23.1
